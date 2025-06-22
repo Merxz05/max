@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Gato (Tres en Línea)</title>
+
+    <!-- Fuente personalizada -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos externos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <!-- Título del juego -->
+        <h1>Juego del Gato</h1>
+
+        <!-- Información de jugadores y marcador -->
+        <section class="game-info" aria-label="Información de jugadores">
+            <div class="player" id="player-x">
+                <span>Jugador X</span>
+                <span class="score">0</span>
+            </div>
+            <div class="vs">VS</div>
+            <div class="player" id="player-o">
+                <span>Jugador O</span>
+                <span class="score">0</span>
+            </div>
+        </section>
+
+        <!-- Indicador del turno actual -->
+        <section class="turn-indicator" aria-label="Turno actual">
+            <p>Turno: <span id="current-player">X</span></p>
+        </section>
+
+        <!-- Tablero del juego -->
+        <section class="game-board" id="board" aria-label="Tablero del juego">
+            <button class="cell" data-index="0" aria-label="Celda 1"></button>
+            <button class="cell" data-index="1" aria-label="Celda 2"></button>
+            <button class="cell" data-index="2" aria-label="Celda 3"></button>
+            <button class="cell" data-index="3" aria-label="Celda 4"></button>
+            <button class="cell" data-index="4" aria-label="Celda 5"></button>
+            <button class="cell" data-index="5" aria-label="Celda 6"></button>
+            <button class="cell" data-index="6" aria-label="Celda 7"></button>
+            <button class="cell" data-index="7" aria-label="Celda 8"></button>
+            <button class="cell" data-index="8" aria-label="Celda 9"></button>
+        </section>
+
+        <!-- Mensaje de resultado (ganador o empate) -->
+        <section class="message" id="message" aria-live="polite"></section>
+
+        <!-- Controles del juego -->
+        <section class="controls">
+            <button id="reset-btn" aria-label="Reiniciar el juego">Reiniciar Juego</button>
+        </section>
+    </main>
+
+    <!-- Lógica del juego -->
+    <script src="script.js"></script>
+</body>
+</html>
