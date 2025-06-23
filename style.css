@@ -1,0 +1,215 @@
+/* =========================
+   Variables globales (tema)
+   ========================= */
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #ff7e5f;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --light-color: #fff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* =========================
+   Reset básico
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   Cuerpo del documento
+   ========================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* =========================
+   Contenedor principal
+   ========================= */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--light-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+/* =========================
+   Título principal
+   ========================= */
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+/* =========================
+   Información de jugadores
+   ========================= */
+.game-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.player.active {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+#player-x.active {
+    background-color: var(--primary-color);
+}
+
+#player-o.active {
+    background-color: var(--secondary-color);
+}
+
+.vs {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.score {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* =========================
+   Indicador de turno
+   ========================= */
+.turn-indicator {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.turn-indicator span {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* =========================
+   Tablero del juego
+   ========================= */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+.cell {
+    aspect-ratio: 1;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: var(--transition);
+    border: none;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.03);
+}
+
+.cell.x {
+    color: var(--primary-color);
+}
+
+.cell.o {
+    color: var(--secondary-color);
+}
+
+.winning-cell {
+    background-color: #d1ffd1;
+    box-shadow: 0 0 8px #28a745;
+}
+
+/* =========================
+   Mensajes del juego
+   ========================= */
+.message {
+    margin: 20px 0;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-height: 30px;
+}
+
+/* =========================
+   Controles y botón
+   ========================= */
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #3a5a8f;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   Adaptabilidad (responsive)
+   ========================= */
+@media (max-width: 500px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .game-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .player {
+        width: 100%;
+    }
+}
