@@ -1,11 +1,11 @@
 Juego del Gato (Tres en Linea)
 Aplicacion web interactiva del clasico juego del Gato (Tres en Linea) donde dos jugadores compiten para alinear tres de sus simbolos (X u O) en una cuadricula de 3x3.
-
+Tambien disponible en https://cflq.cl/kevin-sanchez/game/
 
 Integrantes
 ----------------------
 - Kevin Sanchez
-- Máximo Mateluna
+- MÃ¡ximo Mateluna
 
 
 Caracteristicas
@@ -20,7 +20,7 @@ Caracteristicas
 Tecnologias utilizadas
 ----------------------
 -HTML5
--CSS3 (con variables CSS y diseño responsivo)
+-CSS3 (con variables CSS y diseÃ±o responsivo)
 -JavaScript Vanilla
 
 Como jugar
